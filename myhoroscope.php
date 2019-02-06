@@ -1,14 +1,4 @@
 <?php
-    if(isset($_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD'] === 'POST') {
-        if(isset($_POST["förnamn"]) && isset($_POST["efternamn"]) && isset($_POST["personnr"])){
-            $user = array();
-            $user['firstname'] = $_POST['förnamn'];
-            $user['lastname'] = $_POST['efternamn'];
-            $user['dateNR'] = $_POST['personnr'];
-
-            setcookie("myCookie", serialize($user), time() + (86400 * 7), "/");
-        }
-    }
 
     class Person{
         public $firstN; 
@@ -23,8 +13,8 @@
             $this->horoscope = $this->getIt($dateNR);
         }
         function getIt($personId){
-            $month = substr($personId, 0, 2);
-            $day = substr($personId, 2, 2);
+            $month = substr($personId, 2, 2);
+            $day = substr($personId, 4, 2);
 
             if($month == 3 && 21 <=$day || $month == 4 && 19 >= $day) {
                 return "Väduren";
