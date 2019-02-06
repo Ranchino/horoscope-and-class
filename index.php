@@ -13,13 +13,13 @@
             die();
         }
     ?>
-    <form action="myhoroscope.php" method="POST">
+    <form action="check.php" method="POST">
         <label>Förnamn</label>
         <input type="text" name="förnamn" id="firstName" placeholder="Förnamn">
         <label>Efternamn</label>
         <input type="text" name="efternamn" id="lastName" placeholder="Efternamn">
         <label>Personnummer</label>
-        <input type="text" name="personnr" id="personNr" placeholder="YYMMDD">
+        <input type="number" name="personnr" id="personNr" placeholder="YYMMDD">
         <button type="submit">Spara</button>
     </form>
     
