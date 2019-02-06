@@ -53,9 +53,11 @@
 
         $person = new Person($firstN, $lastN, $dateNR);
         echo $user["firstname"]." ".$user["lastname"] . "<br>" . "Ditt stjärntecken är: ". $person->horoscope; 
-    } else{
-        echo "Ladda om sidan";
-    }
-
+    } 
 
 ?>
+<br><br>
+<a href="./delete.php">Rensa horoskåpet</a>
+
+
+
